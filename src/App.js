@@ -7,13 +7,6 @@ import TimelineEvent from './components/TimelineEvent';
 
 class App extends Component {
   render() {
-    console.log(timelineData);
-
-    const event = {
-      person: "Person 1",
-      status: "Hangin' out",
-      timestamp: "2018-05-18T22:12:03Z",
-    }
 
     return (
       <div className="App">
@@ -21,7 +14,7 @@ class App extends Component {
           <h1 className="App-title">Application title</h1>
         </header>
         <main className="App-main">
-          <TimelineEvent person={event.person} status={event.status} timestamp={event.timestamp} />
+          <Timeline events={timelineData.events} />
         </main>
       </div>
     );
